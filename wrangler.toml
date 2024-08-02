@@ -12,24 +12,24 @@ TARGET_UPSTREAM = "https://registry-1.docker.io"
 
 [env.production]
 name = "cloudflare-docker-proxy"
-# routes = [
-#   { pattern = "docker.higos.cloudns.ch", custom_domain = true },
-#   { pattern = "quay.higos.cloudns.ch", custom_domain = true },
-#   { pattern = "gcr.higos.cloudns.ch", custom_domain = true },
-#   { pattern = "k8s-gcr.higos.cloudns.ch", custom_domain = true },
-#   { pattern = "k8s.higos.cloudns.ch", custom_domain = true },
-#   { pattern = "ghcr.higos.cloudns.ch", custom_domain = true },
-#   { pattern = "cloudsmith.higos.cloudns.ch", custom_domain = true },
-# ]
+routes = [
+  { pattern = "docker.higos.cloudns.ch", custom_domain = true },
+  { pattern = "quay.higos.cloudns.ch", custom_domain = true },
+  { pattern = "gcr.higos.cloudns.ch", custom_domain = true },
+  { pattern = "k8s-gcr.higos.cloudns.ch", custom_domain = true },
+  { pattern = "k8s.higos.cloudns.ch", custom_domain = true },
+  { pattern = "ghcr.higos.cloudns.ch", custom_domain = true },
+  { pattern = "cloudsmith.higos.cloudns.ch", custom_domain = true },
+]
 
 [env.production.vars]
 MODE = "production"
 TARGET_UPSTREAM = ""
 
-[env.staging]
-name = "cloudflare-docker-proxy-staging"
+# [env.staging]
+# name = "cloudflare-docker-proxy-staging"
 # route = { pattern = "docker-staging.higos.cloudns.ch", custom_domain = true }
 
-[env.staging.vars]
-MODE = "staging"
-TARGET_UPSTREAM = ""
+# [env.staging.vars]
+# MODE = "staging"
+# TARGET_UPSTREAM = ""
