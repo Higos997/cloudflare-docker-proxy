@@ -17,7 +17,7 @@ const routes = {
   "ecr.higos.cloudns.ch": "https://public.ecr.aws",
 
   // staging
-  "docker-staging.libcuda.so": dockerHub,
+  //"docker-staging.libcuda.so": dockerHub,
 };
 
 function routeByHosts(host) {
